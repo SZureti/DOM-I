@@ -1,11 +1,13 @@
 const siteContent = {
   "nav": {
+    "nav-item-0": "Sign-In",
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Blog",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -42,15 +44,18 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Navigation
+
 //Nav Links
 let selectedNavLinks = document.querySelectorAll("nav a");
 selectedNavLinks.forEach((link, i) => {
   link.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
 })
+
 //Changed Nav text color
 selectedNavLinks.forEach((link, i) => {
   link.style.color = "green";
 })
+
 //Added Two Items 
 selectedNavLinks = document.getElementsByTagName("nav")[0];
 let createNewNode = (name) => {
@@ -58,8 +63,11 @@ let createNewNode = (name) => {
   newNode.innerHTML = name;
   return newNode;
 }
-selectedNavLinks.prepend(createNewNode("New Item 1"));
-selectedNavLinks.appendChild(createNewNode("New Item 2"));
+selectedNavLinks.prepend(createNewNode("Sign-In"));
+selectedNavLinks.appendChild(createNewNode("Blog"));
+
+// createNewNode("Sign-In") = link.style.color = "green";
+// links.forEach((item) => (item.style.color = "green"));
 
 //CTA
 let ctaImg = document.getElementById("cta-img");
