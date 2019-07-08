@@ -117,6 +117,6 @@ footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright
 
 // document.body.style.backgroundImage="url('https://i.ibb.co/3NW1BMx/markus-spiske-iar-af-B0-QQw-unsplash.jpg')";
 
-document.addEventListener('mouseover'), function(){
-
-}
+// document.addEventListener('mouseover', function(){
+//   selectedNavLinks.style.color = "white"
+// });
