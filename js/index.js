@@ -52,7 +52,7 @@ selectedNavLinks.forEach((link, i) => {
 })
 
 //Changed Nav text color
-selectedNavLinks.forEach((link, i) => {
+selectedNavLinks.forEach((link) => {
   link.style.color = "green";
 })
 
@@ -63,11 +63,18 @@ let createNewNode = (name) => {
   newNode.innerHTML = name;
   return newNode;
 }
-selectedNavLinks.prepend(createNewNode("Sign-In"));
-selectedNavLinks.appendChild(createNewNode("Blog"));
+// selectedNavLinks.prepend(createNewNode("Sign-In"));
+// selectedNavLinks.appendChild(createNewNode("Blog"));
 
-// createNewNode("Sign-In") = link.style.color = "green";
-// links.forEach((item) => (item.style.color = "green"));
+const navItem1 = document.createElement("a");
+navItem1.textContent = "Prepend";
+navItem1.setAttribute("style", "color: green;");
+document.queryCommandEnabled("nav").prepend(navItem1);
+
+const navItem7 = document.createElement("a");
+navItem7.textContent = "Append";
+navItem7.setAttribute("style, color: green;");
+document.queryCommandEnabled("nav").append(navItem7);
 
 //CTA
 let ctaImg = document.getElementById("cta-img");
@@ -108,3 +115,8 @@ contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
 let footer = document.querySelector("footer");
 footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
 
+// document.body.style.backgroundImage="url('https://i.ibb.co/3NW1BMx/markus-spiske-iar-af-B0-QQw-unsplash.jpg')";
+
+document.addEventListener('mouseover'), function(){
+
+}
